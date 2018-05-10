@@ -1,0 +1,133 @@
+html {
+	background-color: #94b1e0;
+}
+
+body {
+	font-family: tahoma, sans-serif;
+	font-size: 87%;
+}
+
+.container {
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
+	padding-left: 40px;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
+.content-area {
+	border-top: 3px solid #d5deed;
+	border-bottom: 3px solid #d5deed;
+}
+
+.main-area {
+	width: 66%;
+	float: left;
+	padding-right: 40px;
+	box-sizing: border-box; /* Stops padding being added to the overal calculated width */
+}
+
+/* Form Styles */
+form {
+	background-color: #ececec;
+	padding: 30px 40px;
+}
+
+.hidden-label {
+	position: absolute;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+input,
+select {
+	font-family: tahoma, sans-serif;
+	font-size: 100%;
+}
+
+input[type="email"], 
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select {
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	padding: 0 10px;
+	height: 40px;
+	margin-bottom: 15px;
+	border: 1px solid #cdcdcd;
+	outline: none;
+}
+
+input[type="email"]:focus, 
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus {
+	border: 1px solid #5d7293;
+	box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .15);
+}
+
+input[type="submit"] {
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	background-color: #5d7293;
+	color: #fff;
+	padding: 10px 0px;
+	border: 1px solid #111e33;
+	border-radius: 3px;
+	outline: none;
+	margin-bottom: 10px;
+}
+
+input[type="submit"]:hover, 
+input[type="submit"]:focus {
+	border: 1px solid #101a2b;
+	background-color: #4669a0;
+}
+
+.sidebar {
+	width: 34%;
+	float: left;
+	background-color: #d5deed;
+	
+	/*padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;*/
+	
+	padding: 20px 40px 20px 40px; /* top, right, bottom, left, like a clock hand */
+	padding: 20px 40px;
+	box-sizing: border-box;
+	font-size: 85%;
+}
+
+footer {
+	text-align: center;
+	font-size: 85%;
+	color: #999;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+/* Clearfix method, parent automatically clears the child floats */
+.clear-group:before, 
+.clear-group:after {
+	content: "";
+	display: table;
+}
+
+.clear-group:after {
+	clear: both;
+}
+
+.clear-group {
+	zoom: 1;
+}

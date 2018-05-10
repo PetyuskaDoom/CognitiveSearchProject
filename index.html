@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Form</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		
+		<div class="container">
+			<header>
+				<nav class="site-nav">
+				</nav>
+			</header>
+			
+			<div id="demo"></div>
+
+			<div class="content-area clear-group">
+				
+				<div class="main-area">
+
+					<form action="https://tie.interpreterintelligence.com/j_spring_security_check" method="post" enctype="application/x-www-form-urlencoded" id="myForm" target = "_blank">
+						
+						<label for="j_username" class="hidden-label">Username</label>
+						<input type="text" name="j_username" id="username" placeholder="user@translation.ie">
+						
+						<label for="j_password" class="hidden-label">Password</label>
+						<input type="password" name="j_password" id="password" placeholder="password">
+						
+						<input type="submit" value="Connect">
+						
+					</form>
+				</div>
+				
+				<aside class="sidebar">
+				</aside>
+				
+			</div>
+			
+			<footer></footer>
+
+		</div>
+		
+		<script>
+			window.onload = function() 
+			{
+				console.log("Script works");
+				
+				document.getElementById("myForm").addEventListener("submit", buttonClicked);
+				
+				function buttonClicked(e) {
+					
+					console.log("In buttonClicked()");
+
+					var myUrl= "https://tie.interpreterintelligence.com:443/api/address/46132";	
+					window.open(myUrl);
+
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						
+						console.log("readyState: " + this.readyState + ", status: "+ this.status);
+
+						if (this.readyState == 4 && this.status == 200) {
+							document.getElementById("demo").innerHTML = this.responseText;
+						}
+					};
+
+					xhttp.open("GET", myUrl, true);
+					xhttp.send();
+				}		
+			}	
+		</script>
+	</body>
+</html>
